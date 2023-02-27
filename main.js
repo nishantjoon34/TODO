@@ -65,7 +65,7 @@ document.addEventListener('click',()=>{
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal) {
+  if (event.target == modal) { 
     modal.style.display = "none";
   }
 };
@@ -94,7 +94,15 @@ document.getElementById("addItem").addEventListener('click',()=>{
 
 function delEvent(e) {
   e.parentNode.parentNode.style.display = "none";
-  deletedCards.push(e.parentNode.parentNode.id[4]);
+  let newCards=[];
+  for(let i=0; i<allCards.length; i++){
+    if(allCards[i]!=e.parentNode.parentNode.id[4]){
+      newCards.push(allCards[i]);
+    }
+  }
+  allCards=newCards;
+  // deletedCards.push(e.parentNode.parentNode.id[4]);
+  // console.log(e.parentNode.parentNode.id[4])
 }
 
 function addEvent(e) {
@@ -144,11 +152,20 @@ function newModal(e) {
     itemValue += itemIndex[i];
   }
   let cardNumber = parseInt(itemValue);
-  for (let i = 1; i <= globalId; i++) {
-    if (i != cardNumber) {
-      allCards.push(i);
+  // for (let i = 1; i <= globalId; i++) {
+  //   if (i != cardNumber) {
+  //   allCards.push(i);
+  //     let actualCard = "item";
+  //     actualCard += i;
+  //     document.getElementById(actualCard).style.display = "none";
+  //   }
+  // }
+  console.log(cardNumber)
+  for(let i=0; i<allCards.length; i++){
+    if(cardNumber!=allCards[i]){
       let actualCard = "item";
-      actualCard += i;
+      // actualCard += i;
+      actualCard+=allCards[i]
       document.getElementById(actualCard).style.display = "none";
     }
   }
@@ -159,20 +176,18 @@ function back(e) {
   document.getElementById("list").style.display = "inline-block";
   document.getElementById("myBtn").style.display = "block";
   document.getElementById(e.id).style.display = "none";
-  let newAllCards=[]
+  // let newAllCards=[]
   for(let i = 0; i < allCards.length; i++){
-    let f=true;
-    for(let j=0; j<deletedCards.length; j++){
-      if(allCards[i]==deletedCards[j]){
-        f=false; break;
-      }
-    }
-    if(f==true){
-      newAllCards.push(allCards[i]);
+    // for(let j=0; j<deletedCards.length; j++){
+    //   if(allCards[i]==deletedCards[j]){
+    //     f=false; break;
+    //   }
+    // }
+      // newAllCards.push(allCards[i]);
       let actualCard = "item";
       actualCard += allCards[i];
       document.getElementById(actualCard).style.display = "block";
-    }
+    
   }
-  allCards=newAllCards;
+  // allCards=newAllCards;
 }
