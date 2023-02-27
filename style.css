@@ -1,0 +1,113 @@
+*{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;  
+    background-color: rgba(0,0,0,0.4);
+}
+  
+.modal-content {
+    text-align: center;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%; 
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+#myBtn{
+    background-color: rgb(90, 80, 240);
+    border: none;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+}
+
+#items{
+    text-align: center;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 98%;
+    justify-content: space-around;
+}
+
+.card{
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    color: black;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.toptext{
+    background-color: white;
+}
+
+.maincontent{
+    background-color: white; 
+    height: 216px;
+}
+
+.activity{
+    background-color: white;
+}
+
+.buttons{
+    background-color: white;
+}
+
+.contbtns{
+    background-color: white;
+}
+
+.insidebtn{
+    background-color: white;
+}
+
+.fin{
+    background-color: white;
+}
+
+.modal1 {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;  
+    background-color: rgba(0,0,0,0.4);
+}
+  
+.modal-content1 {
+    text-align: center;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%; 
+    border-radius: 10px;
+    background-color: white;
+}
+
+.insidebtn{
+    background-color: rgb(90, 80, 240);
+    border: none;
+    color: white;
+    padding: 4px;
+}
